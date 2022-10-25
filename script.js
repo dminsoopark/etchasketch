@@ -7,3 +7,5 @@ function createGrid(x) {
     $(".grid").wdith(960/x);
     $(".grid").width(960/x);
 }; 
+
+createGrid(16);
