@@ -1,7 +1,12 @@
-let i=0, n=16;
-
-const container = document.getElementById("container");
-
-container.innerHTML = 
-    `<div class="row">${'<div class="cell">X</div>'.repeat(n)}</div>`
-    .repeat(n).replace(/X/g,_=> (i++).toString(n) )
+function makeBlocks() {
+    for (var i = 0; i < 3; i++) {
+        var row = document.createElement('div');
+        row.className = "row";
+        for (var j = 0; j < 3; j++) {
+            var box = document.createElement('div');
+            box.className = "box";
+            row.appendChild(box);
+        }                
+        document.getElementById('boxParent').appendChild(row);
+    }
+}
